@@ -1,0 +1,20 @@
+{
+    "name": "Steve",
+    "profession": "Software engineer",
+    "age": 20,
+    "residence": "S.Korea",
+    "address": "S.Korea, Busan",
+    "languages": ["Uzbek", "English", "Korean"],
+    "skills": ["Html", "Css", "JS", "NodeJS", "Python"],
+    "extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"],
+    "work_place": "IT company",
+    "service_desc": "Amenet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+    "about_me": "Lorem ipsum dolor se amet,Amenet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
+    "city": "Denau",
+    "title": ["Flower", "Seedlings", "Grander", "Old", "New"],
+    "flower_desc": ["What is a Flower?", "What is a Seedlings?", "Who is Grander?"],
+    "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry", "Blossom"],
+    "flower_price": ["15$","25$","12$","20$","35$","30$","22$","19$","9$"],
+    "famaous_words": ["What is Beauiful with Flowers"],
+    "famous_name": ["steve Jobs"]
+}
