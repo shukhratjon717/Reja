@@ -48,3 +48,31 @@ let PORT = 3000;
 server.listen(PORT, function() {
     console.log(`The server is running successfully on port: ${PORT}`)
 });
+
+
+console.log("Jack Ma maslahatlari!")
+const list = [
+    "Yaxshi talaba boling", // 0-20
+    "Choose a good leader and make lots of mistakes", // 20-30
+    "Work on yourself", // 30-40
+    "Do what you are good at", // 40-50
+    "Invest in youth", // 50-60
+    "Rest now, it is late", // 60
+];
+
+function giveAvice(age, callback) {
+     if(typeof age !== "number") callback("Enter a number", null)
+     else if (age <=20) callback(null, list[0]);
+    else if (age >  20 && age <= 30) callback(null, list[1]);
+    else if (age > 30 && age <= 40) callback(null, list[2]);
+    else if (age > 40 &&  age <= 50) callback(null, list[3]);
+    else if (age > 50 && age <= 60) callback(null, list[4]);
+    else {
+        callback(null, list[5])
+    };
+};
+
+giveAvice(70, (err, data) => {
+    if(err) console.log("ERROR", err);
+    console.log("Javob:", data);
+});
