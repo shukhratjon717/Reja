@@ -38,7 +38,7 @@ app.get('/author', (req, res) => {
 });
 
 app.get("/", function(req, res) {
-    res.render("harid")
+    res.render("reja")
 });
 
 
@@ -46,49 +46,68 @@ app.get("/", function(req, res) {
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function() {
-    console.log(`The server is running successfully on port: ${PORT}`)
+    console.log(`The server is running successfully on port: ${PORT}, http://localhost:${PORT}`)
 });
 
 
-console.log("Jack Ma maslahatlari!")
-const list = [
-    "Be a good student", // 0-20
-    "Choose a good leader and make lots of mistakes", // 20-30
-    "Work on yourself", // 30-40
-    "Do what you are good at", // 40-50
-    "Invest in youth", // 50-60
-    "Rest now, it is late", // 60
-];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log("Jack Ma maslahatlari!")
+// const list = [
+//     "Be a good student", // 0-20
+//     "Choose a good leader and make lots of mistakes", // 20-30
+//     "Work on yourself", // 30-40
+//     "Do what you are good at", // 40-50
+//     "Invest in youth", // 50-60
+//     "Rest now, it is late", // 60
+// ];
 
 
 // Callback functions
-function giveAvice(age, callback) {
-    if(typeof age !== "number") callback("Enter a number", null)
-    else if (age <=20) callback(null, list[0]);
-   else if (age >  20 && age <= 30) callback(null, list[1]);
-   else if (age > 30 && age <= 40) callback(null, list[2]);
-   else if (age > 40 &&  age <= 50) callback(null, list[3]);
-   else if (age > 50 && age <= 60) callback(null, list[4]);
-   else {
-    //     setInterval(function () {
-    //      callback(null, list[5])
-    //    }, 1000);
-    setTimeout(function () {
-        callback(null, list[5])
-      }, 1000);
+// function giveAvice(age, callback) {
+//     if(typeof age !== "number") callback("Enter a number", null)
+//     else if (age <=20) callback(null, list[0]);
+//    else if (age >  20 && age <= 30) callback(null, list[1]);
+//    else if (age > 30 && age <= 40) callback(null, list[2]);
+//    else if (age > 40 &&  age <= 50) callback(null, list[3]);
+//    else if (age > 50 && age <= 60) callback(null, list[4]);
+//    else {
+//     //     setInterval(function () {
+//     //      callback(null, list[5])
+//     //    }, 1000);
+//     setTimeout(function () {
+//         callback(null, list[5])
+//       }, 1000);
     
 
-};
-};
-    console.log("passed here 0");
-giveAvice(65, (err, data) => {
-   if(err) console.log("ERROR", err);
-   else {
-    console.log("Javob:", data);
-   }
-});
+// };
+// };
+//     console.log("passed here 0");
+// giveAvice(65, (err, data) => {
+//    if(err) console.log("ERROR", err);
+//    else {
+//     console.log("Javob:", data);
+//    }
+// });
 
-console.log("passed here 1");
+// console.log("passed here 1");
 
 // Asynchronous functionlarn qo'llash
 
