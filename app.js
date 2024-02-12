@@ -5,7 +5,7 @@ const app = express();
 const fs = require("fs");
 
 
-// MongoDB chaqirish
+// MongoDB connection
 const db = require("./server").db();
 
 let user;
@@ -32,16 +32,17 @@ app.set("view engine", "ejs");
 
 // 4) Routing Code
 app.post("/create-item", (req, res) => {
+    console.log("user entered /created-item")
+
     console.log(req.body);
-    res.end("Success")
     const new_reja = req.body.reja;
-    db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+    db.collection("plans").insertOne( {reja: new_reja}, (err, data) => {
         if (err) {
             console.log(err);
-            res.end("Something went wrong");
+            console.log("Something went wrong");
         }else {
-            res.end("Successfully added")
-        };
+            res.end("Successfully added")  
+        }
     });
     // res.json({test: "success"})
 });
@@ -51,16 +52,16 @@ app.get('/author', (req, res) => {
 });
 
 app.get("/", function(req, res) {
+    console.log("user entered /")
     db.collection("plans").find().toArray( (err, data) => {
         if (err) {
             console.log(err);
             res.end("Something went wrong")
         } else  {
-            console.log(data);
-            res.render("reja")
+            // console.log(data);
+            res.render("reja", {items: data})
         }
     })
-    res.render("reja")
 });
 
 
