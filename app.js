@@ -3,6 +3,7 @@ const express = require("express");
 const res = require("express/lib/response")
 const app = express();
 const fs = require("fs");
+const axios = require("axios")
 
 
 // MongoDB connection
@@ -33,11 +34,9 @@ app.set("view engine", "ejs");
 // 4) Routing Code
 app.post("/create-item", (req, res) => {
     console.log("user entered /created-item")
-
-    // console.log(req.body);
     const new_reja = req.body.reja;
     db.collection("plans").insertOne( {reja: new_reja}, (err, data) => {
-        console.log(data.ops)
+        console.log(data.ops)  
         res.json(data.ops[0]);
     });
 });
@@ -56,7 +55,7 @@ app.get("/", function(req, res) {
             res.end("Something went wrong")
         } else  {
             // console.log(data);
-            res.render("reja", {items: data})
+            // res.render("reja", {items: data})
         }
     })
 });
