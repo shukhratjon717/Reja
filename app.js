@@ -54,8 +54,8 @@ app.get("/", function(req, res) {
             console.log(err);
             res.end("Something went wrong")
         } else  {
-            // console.log(data);
-            // res.render("reja", {items: data})
+            console.log(data);
+            res.render("reja", {items: data})
         }
     })
 });
