@@ -1,4 +1,4 @@
-
+// Task-B
 function findNum(num) {
     let count = 0;
     for (let i = 0; i < num.length; i++) {
@@ -11,15 +11,6 @@ function findNum(num) {
    
   let result = findNum('hello561')
   console.log(result)
-  
-  
-
-
-
-
-
-
-
 
 // Task-A 
 
