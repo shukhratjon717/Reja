@@ -1,5 +1,3 @@
-const { default: axios } = require("axios");
-const axios = require('axios/dist/browser/axios.cjs')
 
 console.log("FrontEnd JS ishga tushdi");
 function itemTemplate(item) {

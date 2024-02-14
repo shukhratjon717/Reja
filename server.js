@@ -12,7 +12,7 @@ mongodb.connect(
     },(err, client) => {
         if(err) console.log("ERROR on connction MongoDB");
         else {
-            console.log("MongoDB conection succed");
+            console.log("MongoDB conection succeed");
             module.exports = client;
             const app = require("./app");
             const server = http.createServer(app);
