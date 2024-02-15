@@ -38,4 +38,29 @@ document
     .catch((err) => {
         console.log("Please, try again!")
     } )
+});
+
+document.addEventListener("click", function(e) {
+// delete operation
+    if(e.target.classList.contains("delete-me")) {
+        alert("You pressed 'detele' button")
+        if(confirm("Are you sure you want to delete?")){
+            axios.post("/delete-item",{ id: e.target.getAttribute("data-id")})
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.remove();
+            })
+            .catch((err) => {
+                console.log("Please, try again!");
+            });
+        }
+        }
+    
+
+
+
+    // edit operation
+    if(e.target.classList.contains("edit-me")){
+        alert("siz edit tugmasini bosdingiz"  )
+    };
 })
