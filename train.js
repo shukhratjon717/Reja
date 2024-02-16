@@ -1,94 +1,41 @@
-const moment = require("moment")
-
-class Shop {
-  // state 
-  
-  //constructor
-  constructor(apple, bread, water) {
-    this.apple = apple;
-    this.bread = bread;
-    this.water = water;
-  }
-  
-  sotish(product, amount){
-    let time = moment().format("HH:MM:ss")
-    if(product === "apple") {
-      if(this.apple >= amount) {
-        this.apple -= amount;
-      }else {
-        console.log(`Sorry, we do not have enough product now!`)
-        console.log(`We have ${this.apple} apples in out store now!`)
-      }
-  
-    }else if(product === "bread") {
-      if(this.bread >= amount) {
-        this.bread - amount
-      }else {
-        console.log(`Sorry, we do not have enough bread now!`)
-        console.log(`We have ${this.bread} pieces of bread in our store now!`)
-      }
-    }else if(product === "water") {
-      if(this.water >= amount) {
-        this.water -= amount
-      }else {
-        console.log(`Sorry, we do not have enough water now!`)
-        console.log(`We have ${this.water} water in our store now!`)  
-      }
+// Task D 1st versionfunction checker(str1, str2) {
+  function checker(str1, str2) {
+    let sstr1 = str1.split("");
+    let sstr2 = str2.split("");
+    // console.log(sstr1)
+    // console.log(sstr2)
+    const new1 = sstr1.sort()
+    const new2 = sstr2.sort()
+    // console.log(new1)
+    // console.log(new2)
+    
+    const text1 = new1.join()
+    const text2 = new2.join()
+    // console.log(text1)
+    // console.log(text2)
+    
+    if( text1 === text2) {
+      return true
     }else {
-      console.log("Sorry!, the product you are askig is not present in our store")
-    }
+      return false
+    } 
   }
   
-  qabul(product, amount){
-    if ( product === "apple") {
-        if (this.apple <= amount) {
-          this.apple += amount
-          console.log(`we accepted ${this.apple - apple} apples now`)
-        }else {
-          console.log("You entered unidentified item, please try again!")
-        }
-    }else if(product === "bread") {
-        if(this.bread <= amount) {
-          this.bread += amount;
-          console.log(`we accepted ${this.bread - bread} pieces of bread in our store now`)
-        }else {
-          console.log("Plese enter valid item and amount")
-        }
-    }else if (product === "water") {
-        if(this.water <= amount) {
-          this.water += amount;
-          console.log(`we accepted ${this.water - water} bottles of water  now`)
-        }else {
-          console.log("Please enter valid item and number!")
-        }
-    } else {
-      console.log("Sorry, we will consider your products!")
-    }
-  }
+  checker("hello", 'lelho')
+
+
+// task D 2nd version
+
+
+// function checker(str1, str2) {
+//   for(let i = 0; i < str2.length; i++){
+//     if(str1.includes(str2[i])) {
+//     console.log(true)
+//   }else {
+//     console.log(false)
+//   }
+//   }
   
-  qoldiq(product) {
-    let time = moment().format("HH:MM:ss")
+// };
 
-    if(product === "apple") {
-       console.log(`now at this ${time} time, we have ${this.apple} pieces of bread left in our store now`)
-    } else if (product === "bread") {
-      console.log(`now at this ${time} time, we have ${this.bread} pieces of bread left in our store now`)
-    } else if (product === "water") {
-      console.log(`now at this ${time} time, we have ${this.water} pieces of bread left in our store now`)
-    }
-  }
-}
-
-let apple = 5
-let bread = 7;
-let water = 8
-const shop = new Shop (apple, bread, water)
-
-// shop.qoldiq()
-shop.sotish('apple',6)
-shop.sotish('bread',6)
-shop.qabul("bread", 9)
-shop
-shop.qabul("water", 10)
-shop.qoldiq("bread")
-
+// checker("hello", "elohdx ")
