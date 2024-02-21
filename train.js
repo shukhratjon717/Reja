@@ -1,8 +1,17 @@
-// Task E
-function getReverse(str) {
-  const result = str.split("").reverse().join("")
-  // return result
-  console.log(result)
+// Task F
+
+function double(txt) {
+  for( let i = 0; i < txt.length - 1; i++) {
+      if (txt[i] === txt[i]) {
+        console.log("true")
+        break
+      } 
+  }
 }
 
-getReverse("welcome to future")
+double("egrete")
+
+
+
+
+

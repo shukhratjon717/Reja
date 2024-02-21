@@ -7,8 +7,8 @@ const connectionString = "mongodb+srv://bolakay717:shukhrat717@cluster0.o2z2byv.
 
 mongodb.connect(
     connectionString, 
-    {useNewUrlParser:true, 
-        useUnifiedTopology: true
+    {useNewUrlParser:true,
+ 	useUnifiedTopology: true
     },(err, client) => {
         if(err) console.log("ERROR on connction MongoDB");
         else {
