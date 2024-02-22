@@ -1,17 +1,17 @@
 // Task F
 
-function double(txt) {
-  for( let i = 0; i < txt.length - 1; i++) {
-      if (txt[i] === txt[i]) {
-        console.log("true")
-        break
-      } 
+function findCouple(str) {
+  const txt = str.split("");
+  const arr = [...new Set(txt)];
+  if (txt.length === arr.length) {
+    console.log("false")
+  }
+  else {
+    console.log("true")
   }
 }
 
-double("egrete")
-
-
+findCouple("aplep")
 
 
 
