@@ -25,6 +25,7 @@ app.use(express.urlencoded({extended: true}));
 
 
 // 2); Sessions
+
 // 3) Views code
 app.set("views", "views");
 app.set("view engine", "ejs");
